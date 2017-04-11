@@ -1,12 +1,11 @@
 package com.gricit;
 
+import org.common.WebDriverHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class RegistraionPage {
+public class RegistraionPage extends WebDriverHelper {
 
-	WebDriver driver;
 	WebElement continueButton;
 
 	public void clickContiueButton() {

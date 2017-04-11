@@ -3,7 +3,6 @@ package com.gricit;
 import org.common.Utility;
 import org.common.WebDriverHelper;
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 
 public class AccountInformation extends WebDriverHelper {
@@ -33,9 +32,8 @@ public class AccountInformation extends WebDriverHelper {
 		// firstName.sendKeys("MY FirstName");
 	}
 
-	@Test
+
 	public void registration() throws Exception {
-		driver.get("http://www.gcrit.com/build3/create_account.php?osCsid=i02kqklcsa5a3eclmckqqqgba6");
 		utility.typeInto(lastName, "Terefe");
 		utility.typeInto(firstName, "Capital");
 		utility.selectDropDownByVisibleTxt(selectDropDownElement, "Albania");
