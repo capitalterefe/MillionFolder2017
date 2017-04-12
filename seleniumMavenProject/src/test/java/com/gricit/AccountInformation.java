@@ -34,9 +34,6 @@ public class AccountInformation extends WebDriverHelper {
 
 
 	public void registration() throws Exception {
-		utility.typeInto(lastName, "Terefe");
-		utility.typeInto(firstName, "Capital");
-		utility.selectDropDownByVisibleTxt(selectDropDownElement, "Albania");
 
 	}
 
