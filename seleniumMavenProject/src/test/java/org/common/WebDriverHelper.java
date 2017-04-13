@@ -1,5 +1,7 @@
 package org.common;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -30,8 +32,8 @@ public class WebDriverHelper {
 		}
 
 		driver.get(config.getBaseUrl());
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
 	}
 
 

@@ -10,6 +10,7 @@ public class RegistraionPage extends WebDriverHelper {
 
 	public void clickContiueButton() {
 		continueButton = driver.findElement(By.id("tdb4"));
+
 		continueButton.click();
 	}
 
