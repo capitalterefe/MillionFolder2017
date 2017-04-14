@@ -13,7 +13,9 @@ public class TestGricit extends WebDriverHelper {
 	@Test
 	public void testRegistration() throws Exception {
 
-		registrationPage.clickContiueButton();
+	registrationPage.clickContiueButton();
+	accountInformation.registration();
+	
 
 	}
 }
