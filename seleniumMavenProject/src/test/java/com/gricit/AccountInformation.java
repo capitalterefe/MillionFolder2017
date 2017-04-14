@@ -23,8 +23,8 @@ public class AccountInformation extends WebDriverHelper {
 	By telephoneNumber = By.name("telephone");
 	By faxNumber = By.name("fax");
 	By newsLetter = By.name("newsletter");
-	By password = By.name("newsletter");
-	By passwordConfirmationTxt = By.name("newsletter");
+	By password = By.name("password");
+	By passwordConfirmationTxt = By.name("confirmation");
     By continueBtn = By.xpath("//span[text()='Continue']");
     
 	// This is what we trying to avoid
@@ -48,10 +48,14 @@ public class AccountInformation extends WebDriverHelper {
 	utility.typeInto(telephoneNumber, "1-301-593-9528");
 	utility.typeInto(faxNumber, "1-301-593-0049");
 	utility.clickOn(newsLetter);
-	utility.typeInto(password, "Selenium_batch@2017");
-	utility.typeInto(passwordConfirmationTxt, "Selenium_batch@2017");
-	//utility.clickOn(continueBtn);
+	utility.typeInto(password, "Selenium_battch@2017");
+	utility.typeInto(passwordConfirmationTxt, "Selenium_battch@2017");
+	
 	Thread.sleep(6000);
+	
+	utility.clickOn(continueBtn);
+	
+	Thread.sleep(100000);
 		
 	
 
