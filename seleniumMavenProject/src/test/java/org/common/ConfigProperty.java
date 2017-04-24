@@ -42,4 +42,9 @@ public class ConfigProperty {
 		
 	}
 
+	public String getOperatingSystem() {
+		return prop.getProperty("operatingSystem");
+
+	}
+
 }
