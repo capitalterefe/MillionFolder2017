@@ -41,5 +41,7 @@ public class ConfigProperty {
 	return Long.valueOf(prop.getProperty("waitTime"));
 		
 	}
-
+	public String getOpratingSystem() {
+		return prop.getProperty("opratingSystem");
+	}
 }
