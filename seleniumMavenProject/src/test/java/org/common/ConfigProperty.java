@@ -37,4 +37,9 @@ public class ConfigProperty {
 		return prop.getProperty("password");
 	}
 
+	public long getWaitTime() {
+	return Long.valueOf(prop.getProperty("waitTime"));
+		
+	}
+
 }

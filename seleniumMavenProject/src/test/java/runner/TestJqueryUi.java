@@ -14,14 +14,18 @@ public class TestJqueryUi extends WebDriverHelper {
 	JqueryUiHomePage jqueryUiHomePage = new JqueryUiHomePage();
 	DroppableActionPage droppableActionPage = new DroppableActionPage();
 
+	@Test
 	public void testJqueryHomePage() {
+		driver.switchTo().defaultContent();
 		jqueryUiHomePage.clickDroppable();
 		WebElement dropabbleElement = driver.findElement(By.xpath("//h1[text()='Droppable']"));
 		Assert.assertEquals(dropabbleElement.getText(), "Droppable");
 	}
 
-	@Test(dependsOnGroups = "droppablePage")
+	//@Test(dependsOnGroups = "droppablePage")
+	@Test
 	public void testDragAndDrop() {
+		jqueryUiHomePage.clickDroppable();
 		driver.switchTo().frame(0);
 		WebElement actualElement = driver.findElement(By.xpath("//div[@id='droppable']/p"));
 		String actualTextBeforDrag = actualElement.getText();

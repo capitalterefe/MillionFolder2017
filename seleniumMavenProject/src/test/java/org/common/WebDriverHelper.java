@@ -22,7 +22,7 @@ public class WebDriverHelper {
 		if (config.getBrowser().equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		} else if (config.getBrowser().equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
 			driver = new ChromeDriver();
 		} else if (config.getBrowser().equalsIgnoreCase("internetExplorer")) {
 			driver = new InternetExplorerDriver();
@@ -32,7 +32,7 @@ public class WebDriverHelper {
 		}
 
 		driver.get(config.getBaseUrl());
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(config.getWaitTime(), TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 
