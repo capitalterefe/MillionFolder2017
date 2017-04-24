@@ -14,7 +14,6 @@ public class TestJqueryUi extends WebDriverHelper {
 	JqueryUiHomePage jqueryUiHomePage = new JqueryUiHomePage();
 	DroppableActionPage droppableActionPage = new DroppableActionPage();
 
-	@Test(groups = "droppablePage")
 	public void testJqueryHomePage() {
 		jqueryUiHomePage.clickDroppable();
 		WebElement dropabbleElement = driver.findElement(By.xpath("//h1[text()='Droppable']"));
