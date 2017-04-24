@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+
 public class WebDriverHelper {
 
 	public static WebDriver driver = null;
@@ -21,12 +22,7 @@ public class WebDriverHelper {
 		if (config.getBrowser().equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		} else if (config.getBrowser().equalsIgnoreCase("chrome")) {
-			if (config.getOpratingSystem().equalsIgnoreCase("mac")) {
-				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
-			} else if (config.getOpratingSystem().equalsIgnoreCase("windows")) {
-				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
-			}
-
+			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
 			driver = new ChromeDriver();
 		} else if (config.getBrowser().equalsIgnoreCase("internetExplorer")) {
 			driver = new InternetExplorerDriver();
@@ -40,10 +36,14 @@ public class WebDriverHelper {
 		driver.manage().window().maximize();
 	}
 
+
+
 	@AfterClass
 	public void tearDown() {
 		driver.close();
 		driver.quit();
 	}
+
+
 
 }
