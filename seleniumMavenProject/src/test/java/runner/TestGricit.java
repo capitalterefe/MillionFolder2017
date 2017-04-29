@@ -4,18 +4,25 @@ import org.common.WebDriverHelper;
 import org.testng.annotations.Test;
 
 import com.gricit.AccountInformation;
-import com.gricit.RegistraionPage;
+import com.gricit.MyAccountInformation;
+import com.gricit.WelcomePage;
 
 public class TestGricit extends WebDriverHelper {
-	RegistraionPage registrationPage = new RegistraionPage();
+	WelcomePage welcomPage = new WelcomePage();
 	AccountInformation accountInformation = new AccountInformation();
-
-	@Test
+	MyAccountInformation myAccountInformation = new MyAccountInformation();
+	// @Test
 	public void testRegistration() throws Exception {
-
-	registrationPage.clickContiueButton();
+	welcomPage.clickContiueButton();
 	accountInformation.registration();
 	
+
+	}
+
+	@Test
+	public void loginToAccount() {
+		welcomPage.signIn();
+		myAccountInformation.verifyLogin();
 
 	}
 }

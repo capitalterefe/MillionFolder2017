@@ -53,4 +53,10 @@ public class Utility extends WebDriverHelper {
 		action.moveToElement(firstLocatorElement).moveToElement(secondLocatorElement).click().perform();
 	}
 
+	public String getElementText(By locator) {
+		WebElement element = driver.findElement(locator);
+		String myStringText = element.getText();
+		return myStringText;
+	}
+
 }

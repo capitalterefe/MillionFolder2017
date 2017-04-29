@@ -37,7 +37,7 @@ public class AccountInformation extends WebDriverHelper {
     utility.typeInto(Name, "Suzan");
 	utility.typeInto(lastName, "Knoll");
 	utility.typeInto(dateOfBirth, "01/10/2004");
-	utility.typeInto(email, "suzanknoll@gmail.com");
+		utility.typeInto(email, "capital.terefe@gmail.com");
 	utility.typeInto(companyName, "knoll DDS");
 	utility.typeInto(streetAddress, "1907 East West HWY");
 	utility.typeInto(suburb, "Fredrik");
