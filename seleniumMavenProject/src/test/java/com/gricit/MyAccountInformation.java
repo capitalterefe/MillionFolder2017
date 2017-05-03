@@ -15,4 +15,8 @@ public class MyAccountInformation extends WebDriverHelper {
 		Assert.assertEquals(logOffTxt, "Log Off");
 	}
 
+	public void logOff() {
+		utility.clickOn(logOff);
+	}
+
 }

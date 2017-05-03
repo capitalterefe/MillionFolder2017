@@ -23,6 +23,11 @@ public class Utility extends WebDriverHelper {
 		myElement.sendKeys(myText);
 	}
 
+	public void uploadDoc(By locator, String filePath) {
+		WebElement myElement = driver.findElement(locator);
+		myElement.sendKeys(filePath);
+	}
+
 	public void selectDropDownByVisibleTxt(By locator, String visibleText) {
 		WebElement myElement = driver.findElement(locator);
 		explicitWait(myElement);
