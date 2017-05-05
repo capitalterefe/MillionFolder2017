@@ -9,14 +9,16 @@ public class MyAccountInformation extends WebDriverHelper {
 	Utility utility = new Utility();
 	By myAccountInfo = By.xpath("//h1[text()='My Account Information']");
 	By logOff = By.xpath("//span[text()='Log Off']");
-
+  
 	public void verifyLogin() {
 		String logOffTxt = utility.getElementText(logOff);
 		Assert.assertEquals(logOffTxt, "Log Off");
 	}
 
-	public void logOff() {
-		utility.clickOn(logOff);
+	public void logOff(){
+	
+	utility.clickOn(logOff);
+	}
 	}
 
-}
+

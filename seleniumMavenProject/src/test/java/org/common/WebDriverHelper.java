@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
@@ -27,7 +28,8 @@ public class WebDriverHelper {
 			} else if (config.getOperatingSystem().equalsIgnoreCase("mac")) {
 				System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
 			}
-
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("disable-popup-blocking");
 			driver = new ChromeDriver();
 		} else if (config.getBrowser().equalsIgnoreCase("internetExplorer")) {
 			driver = new InternetExplorerDriver();
