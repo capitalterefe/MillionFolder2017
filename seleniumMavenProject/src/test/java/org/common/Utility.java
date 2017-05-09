@@ -1,5 +1,6 @@
 package org.common;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -62,6 +63,22 @@ public class Utility extends WebDriverHelper {
 		WebElement element = driver.findElement(locator);
 		String myStringText = element.getText();
 		return myStringText;
+	}
+
+	public void handlePopupHitOk() {
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+	}
+
+	public void handlePopupHitCancel() {
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
+	}
+
+	public void handlePopupTypeAndOk() {
+		Alert alert = driver.switchTo().alert();
+		alert.sendKeys("ACCEPTED ");
+		alert.accept();
 	}
 
 }

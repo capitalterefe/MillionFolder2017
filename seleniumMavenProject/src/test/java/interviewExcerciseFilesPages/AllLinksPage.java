@@ -12,6 +12,8 @@ public class AllLinksPage extends WebDriverHelper {
 	By chooseAfile = By.xpath("//input[@id='file-upload']");
 	By uploadBtn = By.xpath("//input[@id='file-submit']");
 	By uploadedFileName = By.xpath("//div[@id='uploaded-files']");
+	By jsAlertElement = By.xpath("//a[text()='JavaScript Alerts']");
+	By clickJsAlertElement = By.xpath("//button[text()='Click for JS Alert']");
 	public void navigateToUpload() {
 		utility.clickOn(fileUpload);
 	}
@@ -27,6 +29,12 @@ public class AllLinksPage extends WebDriverHelper {
 	public void verifyUploadDocument() {
 		String uploadedDocTxt = utility.getElementText(uploadedFileName);
 		Assert.assertEquals(uploadedDocTxt, "Test2.pdf");
+	}
+
+	public void clickOnJavaScriptAlerts() {
+		utility.clickOn(jsAlertElement);
+		utility.clickOn(clickJsAlertElement);
+		utility.handlePopupHitOk();
 	}
 
 }

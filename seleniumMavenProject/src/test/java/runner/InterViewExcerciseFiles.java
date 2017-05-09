@@ -9,12 +9,18 @@ public class InterViewExcerciseFiles extends WebDriverHelper {
 
 	AllLinksPage allLinksPage = new AllLinksPage();
 
-	@Test
+	// @Test
 	public void uploadAfile() {
 		allLinksPage.navigateToUpload();
 		allLinksPage.uploadAfile();
 		allLinksPage.clickOnUpload();
 		allLinksPage.verifyUploadDocument();
+
+	}
+
+	@Test
+	public void testAlerts() {
+		allLinksPage.clickOnJavaScriptAlerts();
 
 	}
 }
