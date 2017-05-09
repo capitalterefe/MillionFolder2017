@@ -7,10 +7,19 @@ import org.testng.Assert;
 
 public class RegisterUserHomePage extends WebDriverHelper {
 	Utility utility = new Utility();
-	By btnVerfy = By.xpath("//div[text()='Categories']");
-
+	By loginVerfy= By.xpath("//u[text()='login']");
+    By myAccountInfo =By.xpath("//span[text()='My Account']");
 	public void verifyRegisterUserHomePage() {
-		String Catagoriestxt = utility.getElementText(btnVerfy);
-		Assert.assertEquals(Catagoriestxt, "Categories");
+		String logintxt = utility.getElementText(loginVerfy);
+		Assert.assertEquals(logintxt, "login");
 	}
-}
+	
+		public void myAccountInformation(){
+			utility.clickOn(myAccountInfo);
+		
+		}
+		
+		
+		
+		
+	}
