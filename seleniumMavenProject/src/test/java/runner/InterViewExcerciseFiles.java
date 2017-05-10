@@ -23,9 +23,9 @@ public class InterViewExcerciseFiles extends WebDriverHelper {
 	@Test
 	public void testAlerts()  {
 		allLinksPage.clickOnJavaScriptAlerts();
-		popUpHandling.ClickForJSAlert();
-		popUpHandling.ClickForJSConfirm();
-		popUpHandling.ClickForJSPrompt();
+		popUpHandling.ClickOkForJSAlert();
+		popUpHandling.ClickCancelForJSAlert();
+		popUpHandling.typeAndClickForJsAlert();
 		
 		
 		

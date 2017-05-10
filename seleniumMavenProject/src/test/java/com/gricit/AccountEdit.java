@@ -5,24 +5,31 @@ import org.common.WebDriverHelper;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-public class AccountEdit extends  WebDriverHelper { 
-	
-	
+public class AccountEdit extends WebDriverHelper {
+
 	Utility utility = new Utility();
-    By firstNameVerify = By.xpath("//td[text()='First Name:']");
-    By rewritename =By.xpath("//input[@name='firstname']");
-    By editfirstname = By.xpath("//input[@name='firstname']");
-    
-    
-    
-    public void accountEditingPageVerfiy(){
-    	String firstnametxt =utility.getElementText(firstNameVerify);
-    	Assert.assertEquals(firstnametxt, "First Name:");
-    }
-	
-	
-	
-   public void typeNewName() {
-	   utility.typeInto(editfirstname, "Caroline");
-   }
+	By firstNameVerify = By.xpath("//td[text()='First Name:']");
+
+	By editfirstname = By.xpath("//input[@name='firstname']");
+	By clickContinue = By.xpath("//span[text()='Continue']");
+
+	public void accountEditingPageVerfiy() {
+		String firstnametxt = utility.getElementText(firstNameVerify);
+		Assert.assertEquals(firstnametxt, "First Name:");
+	}
+
+	public void typeNewName() throws Exception {
+		utility.typeInto(editfirstname, "Caroline");
+	}
+
+	public void getElementText() {
+		String getNewNameg = utility.getElementText(editfirstname);
+		Assert.assertEquals(getNewNameg, "Carolin");
+
+	}
+
+	public void clickContinueBtn() {
+		utility.clickOn(clickContinue);
+	}
+
 }

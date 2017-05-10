@@ -19,22 +19,23 @@ public class JavaScriptAlertClickOnAssertion extends WebDriverHelper {
 
 	}
 
-	public void ClickForJSAlert() {
+	public void ClickOkForJSAlert() {
 		utility.clickOn(jsAlert);
 		utility.handlePopupHitOk();
 
 	}
 
-	public void ClickForJSConfirm() {
+	public void ClickCancelForJSAlert() {
 		utility.clickOn(jsConfirm);
 		utility.handlePopupHitCancel();
 	}
 
-	public void ClickForJSPrompt()  {
+	public void typeAndClickForJsAlert(String name)  {
 		utility.clickOn(jsPrompt);
+		
 	
-		utility.typeInto(jsPrompt, "ali");
-		utility.handlePopupHitOk();
+		utility.handlePopupTypeAndOk("abebe");
+
 
 	}
 }

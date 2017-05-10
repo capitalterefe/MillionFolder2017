@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.gricit.AccountEdit;
 import com.gricit.AccountInformation;
+import com.gricit.ChangeMyAccountAssertion;
 import com.gricit.RegisterUserHomePage;
 import com.gricit.LogOffAssertion;
 import com.gricit.MyAccountDetails;
@@ -19,7 +20,8 @@ public class TestGricit extends WebDriverHelper {
 	RegisterUserHomePage loginVery = new RegisterUserHomePage();
 	MyAccountDetails accDetails = new MyAccountDetails();
 	AccountEdit accountEditInfo = new AccountEdit();
-
+	ChangeMyAccountAssertion newnameassertion = new ChangeMyAccountAssertion();
+	
 	//@Test
 	public void testRegistration() throws Exception {
 		welcomPage.clickContiueButton();
@@ -38,12 +40,16 @@ public class TestGricit extends WebDriverHelper {
 	}
 
 	@Test
-	public void editUserName() {
+	public void editUserName() throws Exception{
 		welcomPage.signIn();
 		myAccountInformation.verifyLogin();
 		loginVery.myAccountInformation();
 		accDetails.myAccountDetailsVerfy();
 		accDetails.viewChangeAccontInfo();	
 		accountEditInfo.typeNewName();
+		accountEditInfo.accountEditingPageVerfiy();
+		Thread.sleep(3000);
+		accountEditInfo.clickContinueBtn();
+		newnameassertion.successfulNameChange();
 	}
 }

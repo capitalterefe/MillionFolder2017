@@ -75,9 +75,9 @@ public class Utility extends WebDriverHelper {
 		alert.dismiss();
 	}
 
-	public void handlePopupTypeAndOk() {
+	public void handlePopupTypeAndOk(String message) {
 		Alert alert = driver.switchTo().alert();
-		alert.sendKeys("ACCEPTED ");
+		alert.sendKeys(message);
 		alert.accept();
 	}
 
