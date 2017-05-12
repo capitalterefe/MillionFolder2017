@@ -33,8 +33,8 @@ public class AllLinksPage extends WebDriverHelper {
 
 	public void clickOnJavaScriptAlerts() {
 		utility.clickOn(jsAlertElement);
-		//utility.clickOn(clickJsAlertElement);
-		//utility.handlePopupHitOk();
+		utility.clickOn(clickJsAlertElement);
+		utility.handlePopupHitOk();
 	}
 
 }

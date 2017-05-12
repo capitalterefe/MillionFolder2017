@@ -1,6 +1,7 @@
 package runner;
 
 import org.common.WebDriverHelper;
+import org.testng.annotations.Test;
 
 import interviewExcerciseFilesPages.AllLinksPage;
 import interviewExcerciseFilesPages.JavaScriptAlertClickOnAssertion;
@@ -19,12 +20,12 @@ public class InterViewExcerciseFiles extends WebDriverHelper {
 
 	}
 
-	// @Test
+	@Test
 	public void testAlerts()  {
 		allLinksPage.clickOnJavaScriptAlerts();
-		popUpHandling.ClickForJSAlert();
-		popUpHandling.ClickForJSConfirm();
-		popUpHandling.ClickForJSPrompt();
+		// popUpHandling.ClickForJSAlert();
+		// popUpHandling.ClickForJSConfirm();
+		// popUpHandling.ClickForJSPrompt();
 		
 		
 		

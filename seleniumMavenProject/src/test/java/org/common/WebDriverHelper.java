@@ -40,7 +40,9 @@ public class WebDriverHelper {
 
 		driver.get(config.getBaseUrl());
 		driver.manage().timeouts().implicitlyWait(config.getWaitTime(), TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+
 	}
 
 	@AfterClass
