@@ -1,7 +1,10 @@
 package org.common;
 
+import java.util.Set;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -81,4 +84,22 @@ public class Utility extends WebDriverHelper {
 		alert.accept();
 	}
 
+	public void switchToPopupWindowAndMaximize() {
+		String primaryWindow = driver.getWindowHandle();
+		Set<String> handles = driver.getWindowHandles();
+		for (String string : handles) {
+			if (string != primaryWindow) {
+				driver.switchTo().window(string);
+				driver.manage().window().maximize();
+				driver.close();
+			}
+		}
+
+	}
+
+	public void scrollToElement(By locator) {
+		WebElement element = driver.findElement(locator);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
 }

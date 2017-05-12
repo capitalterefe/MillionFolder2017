@@ -37,4 +37,5 @@ public class JavaScriptAlertClickOnAssertion extends WebDriverHelper {
 		utility.handlePopupHitOk();
 
 	}
+
 }
