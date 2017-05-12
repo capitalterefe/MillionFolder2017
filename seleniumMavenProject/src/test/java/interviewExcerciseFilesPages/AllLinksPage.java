@@ -14,6 +14,7 @@ public class AllLinksPage extends WebDriverHelper {
 	By uploadedFileName = By.xpath("//div[@id='uploaded-files']");
 	By jsAlertElement = By.xpath("//a[text()='JavaScript Alerts']");
 	By clickJsAlertElement = By.xpath("//button[text()='Click for JS Alert']");
+	By downbottomElement = By.xpath("//a[text()='Elemental Selenium']");
 	public void navigateToUpload() {
 		utility.clickOn(fileUpload);
 	}
@@ -37,4 +38,8 @@ public class AllLinksPage extends WebDriverHelper {
 		utility.handlePopupHitOk();
 	}
 
+	public void takeScreenShootTest(String picture1) {
+		utility.scrollToElement(downbottomElement);
+		utility.takeScreenShot(picture1);
+	}
 }

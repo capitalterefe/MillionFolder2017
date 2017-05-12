@@ -20,7 +20,7 @@ public class InterViewExcerciseFiles extends WebDriverHelper {
 
 	}
 
-	@Test
+	// @Test
 	public void testAlerts()  {
 		allLinksPage.clickOnJavaScriptAlerts();
 		// popUpHandling.ClickForJSAlert();
@@ -28,10 +28,12 @@ public class InterViewExcerciseFiles extends WebDriverHelper {
 		// popUpHandling.ClickForJSPrompt();
 		
 		
-		
-	
-
 	}
 
 
+	@Test
+	public void takeScreenShootTest() {
+
+		allLinksPage.takeScreenShootTest("picture1");
+	}
 }
