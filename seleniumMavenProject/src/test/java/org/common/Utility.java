@@ -116,4 +116,12 @@ public class Utility extends WebDriverHelper {
 			e.printStackTrace();
 		}
 	}
+
+	public void sleep(long miliSec) {
+		try {
+			Thread.sleep(miliSec);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }
