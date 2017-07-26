@@ -1,5 +1,5 @@
 package com.gricit;
 
-public class DeleteME {
+public class NewClass {
 
 }
